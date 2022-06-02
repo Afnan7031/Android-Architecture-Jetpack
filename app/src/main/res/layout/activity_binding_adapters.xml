@@ -12,33 +12,44 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".databinding.binding_adapters.BindingAdaptersActivity">
+        tools:context=".MainActivity">
 
-        <TextView
-            android:id="@+id/quote_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{post.text}"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/quote_author"
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            imageFromUrl="@{post.url}"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/quote_author"
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{quote.author}"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:gravity="center"
+            android:text="@{post.title}"
+            android:textColor="@color/black"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toTopOf="@id/description"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Title" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{post.description}"
+            tools:text="description"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/quote_text" />
+            app:layout_constraintTop_toBottomOf="@id/textView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
