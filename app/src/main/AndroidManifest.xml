@@ -13,6 +13,10 @@
         android:theme="@style/Theme.JetPackNavigationExample">
         <activity
             android:name=".room.HomeActivity"
+       
+            android:exported="false" />
+        <activity
+            android:name=".databinding.OneTwoWayBindingActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,11 +38,13 @@
         <activity
             android:name=".databinding.binding_adapters.BindingAdaptersActivity"
             android:exported="true">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".databinding.HomeActivity"

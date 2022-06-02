@@ -18,5 +18,6 @@ class BindingAdaptersActivity : AppCompatActivity() {
             "https://source.unsplash.com/user/c_v_r/100x100"
          )
         binding.post = post
+
     }
 }
